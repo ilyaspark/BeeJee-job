@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8" /> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/public/custom.css">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcss.com/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+        <link href="https://cdn.bootcss.com/simplePagination.js/1.6/simplePagination.css" rel="stylesheet">
+
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#">BeeJee Tasks</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active home-link">
+                      <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item add-task-link">
+                        <a class="nav-link" href="#">Добавить задачу</a>
+                    </li>
+                    <li class="nav-item admin-login-link">
+                      <a class="nav-link" href="#">Вход для администратора</a>
+                    </li>
+                  </ul>
+              
+            </div>
+          </nav>
+
+
+      
+          <main role="main" class="container">
+
+            <div class="alert alert-success" role="alert">
+                OK
+            </div>
+
+            <div class="alert alert-danger" role="alert">
+                Something went wrong
+            </div>
+
+
+            <div class="jumbotron admin-login">
+
+                    <h3>Вход</h3>
+                    <form id="admin-login-form">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Логин</label>
+                              <input type="text" class="form-control" id="login" aria-describedby="emailHelp" placeholder="vasuapupkin" name="login">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Пароль</label>
+                                <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="000000000" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                    </form>
+
+                    <div class="admin-login-message">
+                        Вы авторизированы.<br/><br/>
+
+                        <button type="button" class="btn btn-danger admin-logout">Выйти</button>
+                    </div>
+
+
+            </div>
+                      
+
+            <div class="jumbotron add-group">
+                <h3>+ Добавить задачу</h3>
+                <form id="task-add-form">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Имя пользователя</label>
+                          <input type="text" class="form-control" id="input1" aria-describedby="emailHelp" placeholder="ВасилийПупкин20" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">E-mail</label>
+                            <input type="email" class="form-control" id="input2" aria-describedby="emailHelp" placeholder="vasuapuplin@gmail.com" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Текст задачи</label>
+                            <textarea class="form-control" id="input3" rows="2" name="text"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                </form>
+            </div>
+
+
+            <div class="jumbotron all-tasks">
+              <h1>Все задачи</h1>
+
+              <div class="sort-info">Нажмите на заголовок для сортировки</div>
+
+              <table class="table" id="tasks-table">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Пользователь</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Текст задачи</th>
+                    <th scope="col">Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+              </table>
+
+              <div id="light-pagination" class="pagination light-theme simple-pagination"></div>
+                
+              
+
+              <center><img src="https://i.gifer.com/ZKZg.gif" width="70px" class="loading-gif"/></center>
+              <div class="no-items"><center>Здесь пока пусто :(<br/>Добавьте задачу нажав на кнопку в верхнем в меню.</center></div>
+            </div>
+          </main>
+
+          <script src="/public/main.js"></script>
+    </body>
+</html>

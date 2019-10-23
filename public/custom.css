@@ -1,0 +1,17 @@
+.add-group{padding: 2rem 2rem;display:none}
+.add-group h2{    margin-bottom: 27px;}
+.alert{display:none}
+
+.admin-login{display:none}
+
+.admin-login-message{display:none}
+
+.sort-info{margin: 26px 0px;}
+
+.mark-succeed, .edit-text{display:none}
+
+.previous, .next{display:none !important}
+
+.no-items{display:none}
+
+.txtt{border: 0; color: #000;}
